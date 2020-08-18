@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_storyboard"
+    app:startDestination="@id/listNotesFragment">
+    <fragment
+        android:id="@+id/listNotesFragment"
+        android:name="com.example.android.myapplication.ListNotesFragment"
+        android:label="fragment_list_notes"
+        tools:layout="@layout/fragment_list_notes" >
+        <action
+            android:id="@+id/action_listNotesFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.example.android.myapplication.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+        <argument
+            android:name="ID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="Title"
+            app:argType="string" />
+        <argument
+            android:name="Description"
+            app:argType="string" />
+    </fragment>
+</navigation>
